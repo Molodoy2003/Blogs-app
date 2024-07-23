@@ -1,0 +1,33 @@
+{
+  "name": "it-academy-diplom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
+  },
+  "dependencies": {
+    "@dicebear/avatars": "^4.10.8",
+    "@dicebear/avatars-avataaars-sprites": "^4.10.8",
+    "@dicebear/avatars-identicon-sprites": "^4.10.8",
+    "@prisma/client": "^5.17.0",
+    "axios": "^1.7.2",
+    "bcrypt": "^5.1.1",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ethereum-blockies": "^0.1.1",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "fs-extra": "^11.2.0",
+    "gravatar-url": "^4.0.1",
+    "jdenticon": "^3.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.4"
+  }
+}

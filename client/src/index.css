@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.navbar-relative {
+  position: relative;
+}
+
+/********************** pagination  ************************/
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination li a {
+  display: block;
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination li a:hover {
+  background-color: #2f302f;
+  color: white;
+}
+
+.pagination li.active a {
+  background-color: #fff;
+  color: black;
+  border: none;
+}
+
+.pagination li.disabled a {
+  color: #ddd;
+  cursor: not-allowed;
+}
