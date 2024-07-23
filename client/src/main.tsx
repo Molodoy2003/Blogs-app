@@ -1,5 +1,5 @@
 import { NextUIProvider } from '@nextui-org/react'
-import ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import AuthGuard from './components/auth-guard/AuthGuard.tsx'
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     element: <AuthPage />,
   },
   {
-    path2: '/',
+    path: '/',
     element: <Layout />,
     children: [
       {
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         element: <PostsPage />,
       },
       {
-        path: '/about',
+        path: 'about',
         element: <AboutPage />,
       },
       {
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
   },
 ])
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById('root')!).render(
   <NextUIProvider>
     <Provider store={store}>
       <ThemeProvider>
